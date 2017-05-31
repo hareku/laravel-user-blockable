@@ -16,9 +16,6 @@ class BlockableServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/blockable.php' => config_path('blockable.php'),
         ]);
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/blockable.php', 'blockable'
-        );
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations/');
     }
@@ -30,6 +27,8 @@ class BlockableServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/blockable.php', 'blockable'
+        );
     }
 }
