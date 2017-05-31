@@ -42,28 +42,28 @@ class User extends Model
 
 ## Usage
 
-### Block a user or users
+### Block users
 
 ```php
 $user->block(1);
 $user->block([1,2,3,4]);
 ```
 
-### Add blockers
+### Add blocker users
 
 ```php
 $user->addBlockers(1);
 $user->addBlockers([1,2,3,4]);
 ```
 
-### Unblock a user or users
+### Unblock users
 
 ```php
 $user->unblock(1);
 $user->unblock([1,2,3,4]);
 ```
 
-### Get blocker users / blocked by users
+### Get blocker users / blocking users
 
 ```php
 // blocker users
@@ -95,7 +95,7 @@ $user->isMutualBlock(1);
 $user->isMutualBlock([1,2,3,4]);
 ```
 
-### Get blocker/blocked IDs
+### Get blocker/blocking IDs
 
 ```php
 $user->block([1,2,3]);
